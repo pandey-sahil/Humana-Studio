@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: suisse-light;
+    font-weight: 300;
+    color: #F3F3F3;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+main {
+    width: 100vw;
+}
+.columns{
+    background: black;
+    padding: 0 .45rem;
+    height: 100%;
+    /* width: 10%; */
+}
+.innerColumn{
+    height: 100%;
+    width: 100%;
+    /* background: rgb(116, 109, 109); */
+    border-left: 1px dashed hsla(0, 0%, 100%, .07);
+    border-right: 1px dashed hsla(0, 0%, 100%, .07);
+}
+.navContainer{
+    /* border-bottom: .5px solid rgba(255, 255, 255, 0.5); */
+}
+.humana{
+    max-width: 100%;
+
+}
+.humana > h2 > svg{
+    height: 100%;
+    width: 100%;
+}
