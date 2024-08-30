@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -61,7 +62,7 @@
             </div>
         </div>
     </nav>
-    <div class="fixed h-screen w-screen grid grid-cols-12 h-screen">
+    <div data-scroll-call="pageColor" data-scroll-id="green" class="fixed h-screen w-screen grid grid-cols-12 h-screen z-0">
         <!-- 12 Columns with Tailwind -->
         <div class="columns border-dashed">
             <div class="innerColumn"></div>
@@ -100,7 +101,7 @@
             <div class="innerColumn"></div>
         </div>
     </div>
-    <main class="main absolute  w-screen top-0 left-0 z-13">
+    <main class="main absolute  w-screen top-0 left-0 z-10">
         <div class="page1 bg-red w-screen py-5 px-2 text-3xl">
             <header class="pb-[15.78vw]">
                 <div class="humana">
@@ -114,13 +115,47 @@
                     </h2>
                 </div>
             </header>
-            <div class="page1Bottom tracking-normal flex w-full gap-32 text-[1.4rem] font-light leading-tight font-normal pt-5">
-                <h3 class="time ">Lisbon, Portugal<br>Local Time → </h3>
-                <h3 class="date"></h3>
-                <h1 class="text-[3`rem] font-light tracking-tighter ml-[-4rem]">We design disruptive brands for <br> organizations that aspire to have a <br> positive social and environmental <br> impact.</h1>
+            <div class="page1Bottom pb-[15.78vw] tracking-normal flex w-full gap-[11.5vw] text-[1.3rem] font-light leading-tight font-normal pt-5">
+                <p class="time ">Lisbon, Portugal<br>Local Time → </p>
+                <p class="date"></p>
+                <h1 class="text-[3.5vw] font-light tracking-tighter ml-[-4rem]">We design disruptive brands for <br>
+                    organizations that aspire to have a <br> positive social and environmental <br> impact.</h1>
+            </div>
+        </div>
+        <div class="page2 flex px-5 pr-10 text-[1.4rem] gap-[9.98rem] pb-[15.78vw]">
+            <div class="page2Left flex text-[#8a8474]">
+                <p>Working worlwide for →</p>
+            </div>
+            <div class="page2Right flex gap-10 text-white ">
+                <div class="page2Links flex flex-col gap-10 font-semibold">
+                    <p>Arts & Culture</p>
+                    <p>Industrial & Agriculture</p>
+                </div>
+                <div class="page2Links flex flex-col gap-10 font-normal">
+                    <p>Civic & Public</p>
+                    <p>Not-For-Profit</p>
+                </div>
+                <div class="page2Links flex flex-col gap-10 font-normal">
+                    <p>Design & Architecture</p>
+                    <p>Professional Services</p>
+                </div>
+                <div class="page2Links flex flex-col gap-10 font-normal">
+                    <p>Fashion & Beauty</p>
+                </div>
             </div>
         </div>
     </main>
+
+
+    <!-- Locomotive Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
 </body>
 
