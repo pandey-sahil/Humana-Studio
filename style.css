@@ -1,15 +1,26 @@
+@font-face {
+    font-family: suisse;
+    src: url(./resources/SuisseIntl-Light.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: suisse;
+    src: url(./resources/SuisseIntl-Regular.ttf);
+    font-weight: 600;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: suisse-light;
-    font-weight: 300;
+    font-family: suisse;
+    font-weight: 100;
     color: #F3F3F3;
 }
 html , body{
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: ;
 }
 main {
     width: 100vw;
@@ -43,9 +54,29 @@ main {
     height: 100%;
     width: 100%;
 }
-.page1Bottom{
+/* .page1Bottom{
     border-bottom: .5px solid rgba(255, 255, 255, 0.349);
-}
+} */
 .page2Links p{
     font-weight: 300;
+}
+
+.innerLine{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.349);
+    animation: width 3s ease 1s;
+}
+
+.scroller::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+    
 }
