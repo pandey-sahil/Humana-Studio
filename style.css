@@ -3,13 +3,14 @@
     src: url(./resources/SuisseIntl-Light.ttf);
     font-weight: 400;
 }
+
 @font-face {
     font-family: suisse;
     src: url(./resources/SuisseIntl-Regular.ttf);
     font-weight: 600;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,57 +18,67 @@
     font-weight: 100;
     color: #F3F3F3;
 }
-html , body{
+
+html,
+body {
     height: 100%;
     width: 100%;
     overflow-x: ;
 }
+
 main {
     width: 100vw;
 }
-.c-scrollbar_thumb  {
+
+.c-scrollbar_thumb {
     background-color: #F3F3F3;
     width: 5px;
     opacity: 1;
 }
-.columns{
+
+.columns {
     background: black;
     padding: 0 .45rem;
     height: 100%;
     /* width: 10%; */
 }
-.innerColumn{
+
+.innerColumn {
     height: 100%;
     width: 100%;
     /* background: rgb(116, 109, 109); */
     border-left: 1px dashed hsla(0, 0%, 100%, .07);
     border-right: 1px dashed hsla(0, 0%, 100%, .07);
 }
-.navContainer{
+
+.navContainer {
     /* border-bottom: .5px solid rgba(255, 255, 255, 0.5); */
 }
-.humana{
+
+.humana {
     max-width: 100%;
 
 }
-.humana > h2 > svg{
+
+.humana>h2>svg {
     height: 100%;
     width: 100%;
 }
+
 /* .page1Bottom{
-    border-bottom: .5px solid rgba(255, 255, 255, 0.349);
+  border-bottom: .5px solid rgba(255, 255, 255, 0.349);
 } */
-.page2Links p{
+.page2Links p {
     font-weight: 300;
 }
 
-.innerLine{
+.innerLine {
     width: 100%;
     background: rgba(255, 255, 255, 0.349);
     animation: width 3s ease 1s;
 }
 
-.scroller::-webkit-scrollbar{
+.scroller::-webkit-scrollbar {
     display: none;
 }
 
@@ -75,8 +86,9 @@ main {
     0% {
         width: 0%;
     }
+
     100% {
         width: 100%;
     }
-    
+
 }
