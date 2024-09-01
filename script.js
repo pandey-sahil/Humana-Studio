@@ -25,6 +25,37 @@ function loco() {
   // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
+  function navAnimation() {
+    let lastScrollY = 0;
+
+    locoScroll.on("scroll", (args) => {
+      let scrollY = args.scroll.y;
+
+      if (scrollY > lastScrollY) {
+        // Scrolling down
+        gsap.to(".nav", {
+          yPercent: -100,
+          duration: 1,
+          ease: "power2.out",
+        });
+        // gsap.to(".logo", {
+        //   opacity: 1,
+        //   duration: 1,
+        //   ease: "power2.out",
+        // });
+      } else {
+        // Scrolling up
+        gsap.to(".nav", {
+          yPercent: 0,
+          duration: 1,
+          ease: "power2.out",
+        });
+      }
+
+      lastScrollY = scrollY;
+    });
+  };
+  navAnimation();
   // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
   ScrollTrigger.refresh();
 
@@ -51,3 +82,18 @@ function page1() {
   dateDiv.innerHTML += ` ` + currentDate
 }
 page1();
+
+function page3Animation() {
+  gsap.to("#page3Wrapper",{
+    transform:"translateX(-102%)",
+    scrollTrigger:{
+        start:"top 0%",
+        end:"top -100%",
+        trigger:".page3",
+        scroller:"main",
+        // markers:true,
+        pin:true,
+        scrub:1
+    }});
+};
+page3Animation();

@@ -78,7 +78,7 @@ main {
     animation: width 3s ease 1s;
 }
 
-.scroller::-webkit-scrollbar {
+.page3::-webkit-scrollbar {
     display: none;
 }
 
