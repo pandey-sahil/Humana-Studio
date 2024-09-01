@@ -23,7 +23,6 @@ html,
 body {
     height: 100%;
     width: 100%;
-    overflow-x: ;
 }
 
 main {
@@ -80,6 +79,24 @@ main {
 
 .page3::-webkit-scrollbar {
     display: none;
+}
+#page6ColWrapper {
+    /* transition: transform 2s ease; */
+    transition: all 5s cubic-bezier(0.19, 1, 0.22, 1);
+    /* transform: translateY(0); */
+}
+.page6ImgWrapper{
+    transition: transform 1s ease;
+    /* transform: translateY(10%); */
+}
+/* #page6ColWrapper:hover .page6ImgWrapper{
+    transform: translateY(0);
+
+} */
+
+
+main::-webkit-scrollbar{
+    z-index: 999;
 }
 
 @keyframes width {
