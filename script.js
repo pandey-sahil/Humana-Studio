@@ -61,43 +61,68 @@ function loco() {
     const wrappers = document.querySelectorAll('#page6ColWrapper');
 
     wrappers.forEach(wrapper => {
-        // Toggle height on click
-        wrapper.addEventListener('click', function () {
-            if (this.classList.contains('h-[10.313rem]')) {
-                this.classList.remove('h-[10.313rem]');
-            } else {
-                this.classList.add('h-[10.313rem]');
+      // Toggle height on click with GSAP
+      wrapper.addEventListener('click', function () {
+        if (this.classList.contains('h-[10.313rem]')) {
+          gsap.to(this, {
+            height: 'auto',
+            duration: 0.5,
+            ease: "power1.inOut",
+            onComplete: () => {
+              this.classList.remove('h-[10.313rem]');
+              locoScroll.update(); // Update scroll after the animation completes
             }
-
-            setTimeout(() => {
-                locoScroll.update();
-            }, 300); // Adjust the delay if necessary
-        });
-
-        // Hover effect to move image wrapper up
-        wrapper.addEventListener('mouseenter', function () {
-            const imgWrapper = this.querySelector('.page6ImgWrapper');
-            if (imgWrapper) {
-                imgWrapper.style.transform = 'translateY(-20px)'; // Move up by 20px or adjust as needed
-                imgWrapper.style.transition = 'transform 0.3s ease';
+          });
+        } else {
+          gsap.to(this, {
+            height: '10.313rem',
+            duration: 0.5,
+            ease: "power1.inOut",
+            onComplete: () => {
+              this.classList.add('h-[10.313rem]');
+              locoScroll.update(); // Update scroll after the animation completes
             }
-        });
+          });
+        }
 
-        // Revert the image wrapper position when hover ends
-        wrapper.addEventListener('mouseleave', function () {
-            const imgWrapper = this.querySelector('.page6ImgWrapper');
-            if (imgWrapper) {
-                imgWrapper.style.transform = 'translateY(0)';
-            }
-        });
+
+      });
+
+      // wrapper.addEventListener('mouseenter', function () {
+      //   const imgWrapper = this.querySelector('.page6ImgWrapper');
+      //   if (imgWrapper) {
+      //     gsap.to(imgWrapper, {
+      //       y: -20, // Move up by 20px or adjust as needed
+      //       duration: 0.3,
+      //       // ease: "power2.inOut"
+      //     });
+      //   }
+      // });
+
+      // wrapper.addEventListener('mouseleave', function () {
+      //   const imgWrapper = this.querySelector('.page6ImgWrapper');
+      //   if (imgWrapper) {
+      //     gsap.to(imgWrapper, {
+      //       y: 0,
+      //       duration: 0.3,
+      //       // ease: "power2.inOut"
+      //     });
+      //   }
+      // });
+
+      // Update locoScroll after the height transition ends
+      wrapper.addEventListener('transitionend', function () {
+        locoScroll.update();
+      });
+
     });
-}
+  }
 
-// Initialize the animation function
-page6ResizeAnime();
+  // Initialize the animation function
+  page6ResizeAnime();
 
-// Refresh ScrollTrigger and update Locomotive Scroll
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // Refresh ScrollTrigger and update Locomotive Scroll
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   // Initial update
   ScrollTrigger.refresh();
 }
@@ -124,6 +149,7 @@ function page1() {
 }
 page1();
 
+
 function page3Animation() {
   gsap.to("#page3Wrapper", {
     transform: "translateX(-102%)",
@@ -140,24 +166,75 @@ function page3Animation() {
 };
 page3Animation();
 
-function page6Animation() {
-  var allWrapper = document.querySelectorAll('#page6ColWrapper');
-  var allImgWrapper = document.querySelectorAll('#page6ImgWrapper');
+function page4Animation() {
+  var tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".countdownDivs",
+      start: "top 70%",
+      scroller: 'main',
+      end: "top 0%",
+      markers: true,
+      onEnter: () => {
+        gsap.fromTo(".countdown",
+          { y: 200, opacity: 0, stagger: 1 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            ease: "power2.out",
+            onUpdate: function () {
 
+              const yearsCount = Math.floor(gsap.getProperty(".yearsCount", "innerText"));
+              const projCount = Math.floor(gsap.getProperty(".projectsCount", "innerText"));
+              const countryCount = Math.floor(gsap.getProperty(".countryCount", "innerText"));
+              const treeCount = Math.floor(gsap.getProperty(".treeCount", "innerText"));
+              document.querySelector(".yearsCount").innerText = yearsCount;
+              document.querySelector(".projectsCount").innerText = projCount;
+              document.querySelector(".countryCount").innerText = countryCount;
+              document.querySelector(".treeCount").innerText = treeCount;
+            }
+          });
+      }
+    },
 
-
-  allWrapper.forEach(function (wrapper) {
-    var imgs = wrapper.childNodes[11]
-    // console.log('wrapper: ', wrapper)
-    console.log('imgs: ', imgs)
-    gsap.set(imgs,{
-      y:200
-    })
-    wrapper.addEventListener('mouseenter', function () {
-      gsap.from(imgs, {
-        y: 0
-      })
-    })
   })
+
+  // Counter animation
+  tl.to(".projectsCount", {
+    innerText: 161,
+    snap: { innerText: 1 },
+    duration: 1, // Duration of the counting
+    ease: "none" // Linear counting
+  }, 'a');
+  tl.to(".yearsCount", {
+    innerText: 5,
+    snap: { innerText: 1 },
+    duration: 1, // Duration of the counting
+    ease: "none" // Linear counting
+  }, 'a');
+  tl.to(".countryCount", {
+    innerText: 23,
+    snap: { innerText: 1 },
+    duration: 1, // Duration of the counting
+    ease: "none" // Linear counting
+  }, 'a');
+  tl.to(".treeCount", {
+    innerText: 28,
+    snap: { innerText: 1 },
+    duration: 1, // Duration of the counting
+    ease: "none" // Linear counting
+  }, 'a');
+
+}
+page4Animation();
+
+
+function page7Animation (){
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    freeMode: true,
+  });
 };
-// page6Animation();
+
+page7Animation();

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -63,7 +64,7 @@
         </div>
     </nav>
     <div data-scroll-call="pageColor" data-scroll-id="green"
-        class="fixed h-screen w-screen grid grid-cols-12 h-screen z-0">
+        class="fixed h-screen p-0 w-screen grid grid-cols-12 h-screen z-0">
         <!-- 12 Columns with Tailwind -->
         <div class="columns border-dashed">
             <div class="innerColumn"></div>
@@ -102,7 +103,8 @@
             <div class="innerColumn"></div>
         </div>
     </div>
-    <main class="main absolute w-screen top-0 left-0 z-10">
+    <main class="main absolute w-screen p-0 top-0 left-0  z-10">
+        <!-- Page1 -->
         <div class="page1 w-screen py-5 px-3 text-3xl">
             <header class="pb-[15.78vw]">
                 <div class="humana">
@@ -127,6 +129,8 @@
         <div class="line h-[1px] w-full px-4">
             <div class="innerLine h-full"></div>
         </div>
+
+        <!-- Page2 -->
         <div class="page2 px-3 py-8 pr-10 text-[1.4rem]">
             <div class="flex pb-[15.78vw] gap-[9.98rem]">
                 <div class="page2Left flex text-[#8a8474]">
@@ -151,6 +155,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Page3 -->
         <div class="page3 w-screen  px-3 pb-[20.563rem] overflow-auto ">
             <div id="page3UpperLine" class="line my-9 h-[1px] w-full overflow-hidden">
                 <div class="innerLine h-full"></div>
@@ -223,6 +229,8 @@
         <div class="line h-[1px] w-full px-4">
             <div class="innerLine h-full"></div>
         </div>
+
+        <!-- Page4 -->
         <div class="page4 py-[4.438rem] pb-[10.25rem] px-3 ">
             <div class="page4Button border-[#8a8474] inline-block text-[1.3rem] border rounded-3xl px-6 py-1 block">
                 <p class="text-[#8a8474]">Our Vision ↗</p>
@@ -235,41 +243,47 @@
                 </h2>
             </div>
             <div class="countdownDivs pt-[5.5vw] flex justify-start">
-                <div class="countdown1 inline-block mr-[7.62rem]">
+                <div class="countdown inline-block overflow-hidden mr-[7.62rem]">
                     <div
-                        class="innerCount justify-start text-[9rem] tracking-normal leading-none flex items-top inline-block font-bold">
-                        <h1 class="leading-none mr-[-9px] inline-block">5</h1>
+                        class="innerCount justify-start text-[9rem] traking-normal leading-none flex items-top inline-block font-bold">
+                        <h1 class="yearsCount leading-none mr-[-9px] inline-block">0</h1>
                         <h3 class="text-[2.897rem] mt-[1.2rem] inline-block">Years</h3>
                     </div>
                     <h2 class="text-[1.638rem] font-bold">Doing our Best</h2>
                 </div>
-                <div class="countdown2 inline-block mr-[7.62rem]">
+
+                <div class="countdown inline-block overflow-hidden mr-[7.62rem]">
                     <div
                         class="innerCount justify-start text-[9rem] tracking-normal leading-none flex items-top inline-block font-bold">
-                        <h1 class="leading-none mr-[-9px] inline-block">161</h1>
+                        <h1 class="projectsCount leading-none mr-[-9px] inline-block">100</h1>
                     </div>
                     <h2 class="text-[1.638rem] font-bold">Completed Projects</h2>
                 </div>
-                <div class="countdown3 inline-block mr-[7.62rem]">
+
+                <div class="countdown inline-block overflow-hidden mr-[7.62rem]">
                     <div
                         class="innerCount justify-start text-[9rem] tracking-normal leading-none flex items-top inline-block font-bold">
-                        <h1 class="leading-none mr-[-9px] inline-block">23</h1>
+                        <h1 class="countryCount leading-none mr-[-9px] inline-block">00</h1>
                     </div>
                     <h2 class="text-[1.638rem] font-bold">Countries Worldwide</h2>
                 </div>
-                <div class="countdown4 inline-block mr-[7.62rem]">
+
+                <div class="countdown inline-block overflow-hidden mr-[7.62rem]">
                     <div
                         class="innerCount justify-start text-[9rem] tracking-normal leading-none flex items-top inline-block font-bold">
-                        <h1 class="leading-none mr-[-9px] inline-block">28</h1>
+                        <h1 class="treeCount leading-none mr-[-9px] inline-block">00</h1>
                     </div>
                     <h2 class="text-[1.638rem] font-bold">Trees Planted</h2>
                 </div>
+
             </div>
         </div>
 
         <div class="line h-[1px] w-full px-4">
             <div class="innerLine h-full"></div>
         </div>
+
+        <!-- Page5 -->
         <div class="page5 px-3 py-8 text-[1.4rem] pb-[13.813rem] flex gap-[15.5rem]">
             <div class="page5Left flex gap-[9.98rem]">
                 <div class="overflow-hidden">
@@ -290,7 +304,9 @@
         <div class="line h-[1px] w-full px-4">
             <div class="innerLine h-full"></div>
         </div>
-        <div class="page6  py-8 w-full leading-tight">
+
+        <!-- Page6 -->
+        <div class="page6 py-8 pb-[13.438rem] w-full leading-tight">
             <div class="page6Part1 px-3 flex w-full items-start leading-tight pb-[4.813rem]">
                 <div
                     class="page6Button border-[#8a8474] mr-[5.063rem] inline-block text-[1.3rem] border rounded-3xl px-6 py-1">
@@ -309,58 +325,277 @@
             </div>
 
             <div class="page6Part2 text-[1.4rem] h-auto px-3.5 pt-2">
+
                 <div id="page6ColWrapper"
-                    class="h-[10.313rem] overflow-hidden transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-[231px_231px_231px_664px] text-[1.4rem] text-white cursor-pointer">
-                    <div class="py-2">Swiss Escape</div>
-                    <div class="py-2">Hazique Memon</div>
-                    <div class="py-2">Co-Founder</div>
-                    <div class="py-2 pr-4">
-                        Publications on Forbes, partnerships with world organizations, and opening of other branches -
-                        "Their creativity is unique and they look at things from a whole new perspective. The result
-                        they provided us with was beyond our expectation."
+                    class="h-[10.313rem] overflow-hidden transition-all duration-300 ease-in-out text-[1.4rem] text-white cursor-pointer">
+                    <div class="grid grid-cols-1  md:grid-cols-[231px_225px_217px_667px]">
+                        <div class="py-2">Tzol’Skin</div>
+                        <div class="py-2">Yasmina Harrison</div>
+                        <div class="py-2">Founder & CEO</div>
+                        <div class="py-2">
+                            Publications on Vogue, Vanity Fair and Condé Nast - “(...) I have been <br>contacted by
+                            major
+                            publications such as Vogue and Vanity Fair <br>because of my aesthetic, brand presentation,
+                            imagery, and brand <br>story. I could have not done it alone.”
+                        </div>
                     </div>
 
                     <!-- Image Wrapper -->
                     <div class="page6ImgWrapper col-span-4 w-full">
-                        <div class="page6Images py-[2.55rem] gap-3.5 flex">
+                        <div class="page6Images py-[.75rem] gap-3.5 flex">
                             <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image1.auto"
                                 alt="">
-                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image1.auto"
+                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image2.auto"
                                 alt="">
                         </div>
                     </div>
                 </div>
-
-                <div class="line h-[1px] w-full px-4">
+                <div class="line h-[1px] w-full">
                     <div class="innerLine h-full"></div>
                 </div>
-
                 <div id="page6ColWrapper"
-                    class="h-[10.313rem] overflow-hidden transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-[231px_231px_231px_664px] text-[1.4rem] text-white cursor-pointer">
-                    <div class="py-2">Swiss Escape</div>
-                    <div class="py-2">Hazique Memon</div>
-                    <div class="py-2">Co-Founder</div>
-                    <div class="py-2 pr-4">
-                        Publications on Forbes, partnerships with world organizations, and opening of other branches -
-                        "Their creativity is unique and they look at things from a whole new perspective. The result
-                        they provided us with was beyond our expectation."
+                    class="h-[10.313rem] overflow-hidden transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-[231px_225px_217px_667px] text-[1.4rem] text-white cursor-pointer">
+                    <div class="py-2">Impact Hub Lisbon</div>
+                    <div class="py-2">Francesco Rocca</div>
+                    <div class="py-2">Managing Director</div>
+                    <div class="py-2 ">
+                        150% growth in applications for Bora Mulheres by Coca Cola - "A<br>disruptive digital presence
+                        is key to make your story remarkable,<br>Humana is the key partner to make this happen."
                     </div>
 
                     <!-- Image Wrapper -->
                     <div class="page6ImgWrapper col-span-4 w-full">
                         <div class="page6Images py-[2.55rem] gap-3.5 flex">
-                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image1.auto"
+                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image3.auto"
                                 alt="">
-                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image1.auto"
+                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image4.auto"
                                 alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="line h-[1px] w-full">
+                    <div class="innerLine h-full"></div>
+                </div>
+                <div id="page6ColWrapper"
+                    class="h-[10.313rem] overflow-hidden transition-all duration-300 ease-in-out grid grid-cols-1 md:grid-cols-[231px_225px_217px_667px] text-[1.4rem] text-white cursor-pointer">
+                    <div class="py-2">Swiss Escape</div>
+                    <div class="py-2">Hazique Memon</div>
+                    <div class="py-2">Co-Founder</div>
+                    <div class="py-2 ">
+                        Publications on Forbes, partnerships with world organizations, and<br>opening of other branches
+                        - "Their creativity is unique and they look<br>at things from a whole new perspective. The
+                        result they provided us<br>with was beyond our expectation."
+                    </div>
+
+                    <!-- Image Wrapper -->
+                    <div class="page6ImgWrapper col-span-4 w-full">
+                        <div class="page6Images py-[.55rem] gap-3.5 flex">
+                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image5.auto"
+                                alt="">
+                            <img class="h-[24.688rem] w-[41.35rem] rounded-2xl" src="./resources/page6Image6.auto"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="line h-[1px] w-full">
+                    <div class="innerLine h-full"></div>
+                </div>
+            </div>
+        </div>
+        <div class="line h-[1px] w-full px-4">
+            <div class="innerLine h-full"></div>
+        </div>
+
+        <!-- Page7 -->
+        <div class="page7 py-8 pb-0 px-3 w-full leading-tight">
+            <div class="page7Text">
+                <div class="page7Button border-[#8a8474] mr-[5.063rem] inline-block text-[1.3rem] border rounded-3xl px-6 py-2 mb-5">
+                    <p class="text-[#8a8474]">Our Impact ↗</p>
+                </div>
+                <div class="py-5 pb-3">
+                    <h2><svg viewBox="0 0 1888 114" fill="#fff" xmlns="http://www.w3.org/2000/svg" class="svg-title"
+                            data-v-360f8170="">
+                            <path
+                                d="M76.1414 0H64.5345L40.0826 98.3984L11.4522 0H0L33.7375 111.992H45.6539L70.2606 18.0732L95.022 111.992H106.938L140.521 0H129.378L101.367 98.3984L76.1414 0Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M181.758 114C200.329 114 213.639 104.577 217.817 87.1219H207.758C204.508 98.7073 195.377 105.195 182.377 105.195C165.354 105.195 152.818 93.4553 152.354 73.2195H218.591C219.829 47.2683 204.817 27.4959 181.449 27.4959C159.164 27.4959 142.45 44.0244 142.45 70.748C142.45 96.6992 157.461 114 181.758 114ZM181.294 36.1463C198.008 36.1463 208.067 50.3577 208.067 64.4146H152.664C154.676 45.7236 165.818 36.1463 181.294 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M344.553 70.748C344.553 43.0976 328.767 27.4959 309.732 27.4959C297.351 27.4959 287.601 33.2114 281.566 43.252V0H271.971V111.992H281.566V98.3984C287.601 108.285 297.351 114 309.732 114C328.767 114 344.553 98.3984 344.553 70.748ZM280.947 70.748C280.947 46.0325 295.185 36.1463 307.72 36.1463C323.196 36.1463 334.184 48.6585 334.184 70.748C334.184 92.8374 323.196 105.35 307.72 105.35C295.185 105.35 280.947 95.4634 280.947 70.748Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M395.156 114C413.728 114 427.037 104.577 431.215 87.1219H421.156C417.906 98.7073 408.775 105.195 395.775 105.195C378.752 105.195 366.217 93.4553 365.752 73.2195H431.989C433.227 47.2683 418.216 27.4959 394.847 27.4959C372.562 27.4959 355.848 44.0244 355.848 70.748C355.848 96.6992 370.859 114 395.156 114ZM394.692 36.1463C411.406 36.1463 421.465 50.3577 421.465 64.4146H366.062C368.074 45.7236 379.216 36.1463 394.692 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path d="M458.239 0H448.644V111.992H458.239V0Z" fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M481.439 28.8862V111.992H491.034V28.8862H481.439ZM481.439 0V15.2927H491.034V0H481.439Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M547.044 114C565.615 114 578.924 104.577 583.103 87.1219H573.043C569.793 98.7073 560.663 105.195 547.663 105.195C530.639 105.195 518.104 93.4553 517.64 73.2195H583.876C585.115 47.2683 570.103 27.4959 546.734 27.4959C524.449 27.4959 507.735 44.0244 507.735 70.748C507.735 96.6992 522.747 114 547.044 114ZM546.58 36.1463C563.294 36.1463 573.353 50.3577 573.353 64.4146H517.949C519.961 45.7236 531.104 36.1463 546.58 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M599.002 28.8862H588.169L620.049 111.992H629.335L660.286 28.8862H649.917L624.846 98.7073L599.002 28.8862Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M704.674 114C723.245 114 736.555 104.577 740.733 87.1219H730.674C727.424 98.7073 718.293 105.195 705.293 105.195C688.27 105.195 675.734 93.4553 675.27 73.2195H741.507C742.745 47.2683 727.733 27.4959 704.365 27.4959C682.079 27.4959 665.366 44.0244 665.366 70.748C665.366 96.6992 680.377 114 704.674 114ZM704.21 36.1463C720.924 36.1463 730.983 50.3577 730.983 64.4146H675.58C677.591 45.7236 688.734 36.1463 704.21 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M794.887 28.8862V111.992H804.482V28.8862H794.887ZM794.887 0V15.2927H804.482V0H794.887Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M837.277 28.8862H827.682V111.992H837.277V65.8049C837.277 48.1951 848.11 36.1463 862.503 36.1463C879.217 36.1463 883.396 46.6504 883.396 62.252V111.992H892.991V59.626C892.991 39.0813 884.788 27.4959 864.979 27.4959C849.349 27.4959 841.456 35.065 837.277 42.9431V28.8862Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M954.58 91.1382C954.58 78.3171 969.127 73.6829 1003.02 69.9756V73.9919C1003.02 97.4715 989.091 105.504 973.615 105.504C962.472 105.504 954.58 99.9431 954.58 91.1382ZM1003.17 111.992H1012.92C1012.46 102.878 1012 94.8455 1012 85.4228C1012 78.7805 1012.15 71.3659 1012.15 59.7805C1012.15 35.065 999.305 27.0325 979.96 27.0325C960.925 27.0325 948.235 37.6911 945.913 54.2195H955.973C956.746 43.252 965.103 35.5284 979.341 35.5284C991.258 35.5284 1002.56 39.5447 1002.56 58.5447V61.4797C962.473 65.6504 943.901 72.2927 943.901 91.2927C943.901 105.041 955.818 114 971.449 114C986.924 114 997.293 108.13 1002.71 99.3252L1003.17 111.992Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1141.62 70.748C1141.62 43.0976 1125.84 27.4959 1106.8 27.4959C1094.42 27.4959 1084.67 33.2114 1078.63 43.252V0H1069.04V111.992H1078.63V98.3984C1084.67 108.285 1094.42 114 1106.8 114C1125.84 114 1141.62 98.3984 1141.62 70.748ZM1078.02 70.748C1078.02 46.0325 1092.25 36.1463 1104.79 36.1463C1120.26 36.1463 1131.25 48.6585 1131.25 70.748C1131.25 92.8374 1120.26 105.35 1104.79 105.35C1092.25 105.35 1078.02 95.4634 1078.02 70.748Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1192.23 114C1210.8 114 1224.11 104.577 1228.28 87.1219H1218.22C1214.98 98.7073 1205.84 105.195 1192.84 105.195C1175.82 105.195 1163.29 93.4553 1162.82 73.2195H1229.06C1230.3 47.2683 1215.28 27.4959 1191.92 27.4959C1169.63 27.4959 1152.92 44.0244 1152.92 70.748C1152.92 96.6992 1167.93 114 1192.23 114ZM1191.76 36.1463C1208.48 36.1463 1218.53 50.3577 1218.53 64.4146H1163.13C1165.14 45.7236 1176.29 36.1463 1191.76 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1249.58 28.8862H1235.81V37.2276H1249.58V92.2195C1249.58 108.748 1252.99 111.992 1267.84 111.992H1275.74V103.341H1270.78C1259.64 103.341 1259.33 101.024 1259.33 90.3659V37.2276H1275.74V28.8862H1259.33V10.1951H1249.58V28.8862Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1296.13 28.8862H1282.36V37.2276H1296.13V92.2195C1296.13 108.748 1299.54 111.992 1314.39 111.992H1322.28V103.341H1317.33C1306.19 103.341 1305.88 101.024 1305.88 90.3659V37.2276H1322.28V28.8862H1305.88V10.1951H1296.13V28.8862Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1371.62 114C1390.19 114 1403.5 104.577 1407.68 87.1219H1397.62C1394.37 98.7073 1385.24 105.195 1372.24 105.195C1355.21 105.195 1342.68 93.4553 1342.21 73.2195H1408.45C1409.69 47.2683 1394.68 27.4959 1371.31 27.4959C1349.02 27.4959 1332.31 44.0244 1332.31 70.748C1332.31 96.6992 1347.32 114 1371.62 114ZM1371.15 36.1463C1387.87 36.1463 1397.93 50.3577 1397.93 64.4146H1342.52C1344.54 45.7236 1355.68 36.1463 1371.15 36.1463Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1461.63 28.4228C1461.17 28.2683 1460.55 28.2683 1460.08 28.2683H1458.84C1448.94 28.2683 1437.95 34.2927 1434.24 44.0244V28.8862H1425.11V111.992H1434.55V68.4309C1434.55 50.8211 1440.12 38.4634 1457.3 38.4634H1459.31C1460.08 38.4634 1460.86 38.4634 1461.63 38.6179V28.4228Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1528.3 96.8537L1509.89 28.8862H1499.21L1523.35 111.992H1532.17L1553.37 42.1707L1575.2 111.992H1584.17L1608.31 28.8862H1597.64L1579.84 97.0081L1558.48 28.8862H1548.89L1528.3 96.8537Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1624.08 70.748C1624.08 46.8049 1635.38 36.3008 1651.48 36.3008C1667.42 36.3008 1679.02 46.8049 1679.02 70.748C1679.02 94.6911 1667.42 105.195 1651.48 105.195C1635.38 105.195 1624.08 94.6911 1624.08 70.748ZM1613.87 70.748C1613.87 101.024 1631.67 114 1651.48 114C1671.44 114 1689.24 101.024 1689.24 70.748C1689.24 40.626 1671.44 27.4959 1651.48 27.4959C1631.67 27.4959 1613.87 40.626 1613.87 70.748Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1742.43 28.4228C1741.97 28.2683 1741.35 28.2683 1740.88 28.2683H1739.65C1729.74 28.2683 1718.75 34.2927 1715.04 44.0244V28.8862H1705.91V111.992H1715.35V68.4309C1715.35 50.8211 1720.92 38.4634 1738.1 38.4634H1740.11C1740.88 38.4634 1741.66 38.4634 1742.43 38.6179V28.4228Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path d="M1763.72 0H1754.12V111.992H1763.72V0Z" fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path
+                                d="M1843.87 70.748C1843.87 95.4634 1829.63 105.35 1817.09 105.35C1801.46 105.35 1790.63 92.9919 1790.63 70.748C1790.63 48.5041 1801.46 36.1463 1817.09 36.1463C1829.63 36.1463 1843.87 46.0325 1843.87 70.748ZM1780.26 70.748C1780.26 98.3984 1795.89 114 1815.08 114C1827.46 114 1837.21 108.285 1843.25 98.3984V111.992H1852.84V0H1843.25V43.252C1837.21 33.2114 1827.46 27.4959 1815.08 27.4959C1795.89 27.4959 1780.26 43.0976 1780.26 70.748Z"
+                                fill="#F3F3F3" data-v-360f8170=""></path>
+                            <path d="M1888 111.992V97.4715H1874.54V111.992H1888Z" fill="#F3F3F3" data-v-360f8170="">
+                            </path>
+                        </svg></h2>
+                </div>
+            </div>
+            <div class="page7Slider py-[4.3rem]">
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide overflow-hidden w-[20.375rem]">
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg1.auto" alt="">
+                        </div>
+                        <div class="swiper-slide overflow-hidden w-[41.688rem]">  
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg2.auto" alt="">
+                        </div>
+                        <div class="swiper-slide overflow-hidden w-[41.688rem]">  
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg3.auto" alt="">
+                        </div>
+                        <div class="swiper-slide overflow-hidden w-[41.688rem]">  
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg4.auto" alt="">
+                        </div>
+                        <div class="swiper-slide overflow-hidden w-[20.375rem]">
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg5.auto" alt="">
+                        </div>
+                        <div class="swiper-slide overflow-hidden w-[41.688rem]">
+                            <img class="h-full w-full object-cover object-center" src="./resources/sliderImg6.auto" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="line h-[1px] w-full px-4">
+            <div class="innerLine h-full"></div>
+        </div>
+
+        <!-- Page9 -->
+        <div class="page8 flex gap-[0.875rem] pb-[13.438rem] pt-[2.063rem] px-4 w-full leading-tight">
+            <div class="page8Left w-[34.563rem] text-[2.897rem]">
+                <h1 class="leading-tight">We don’t strive to be the best design studio in the world — but the best one for the world.</h1>
+            </div>
+            <div class="page8Right w-[48.625rem] text-[2.316rem]">
+                <h1>We’re passionate about design, and concerned with the wider context. We believe that everybody has the potential to change the world, that’s why we’re here: to take your ideas to the next level.</h1>
+            </div>
+        </div>
+        <div class="line h-[1px] w-full px-4">
+            <div class="innerLine h-full"></div>
+        </div>
+
+        <!-- Page8 -->
+        <div class="page9 gap-[0.875rem] pt-[2.063rem] px-5 w-full leading-tight">
+            <div class="grid grid-cols-4 gap-4 py-3 pb-[12.188rem]">
+                <div class="w-[20.375rem] leading-none text-[2.897rem]">
+                    <h1>Work with us</h1>
+                </div>
+                <div class="w-[20.375rem] leading-tight text-[1.395rem]">
+                    <p>We are eager to learn about your organization and to help you achieve a well-defined out-of-the-box visual strategy.</p>
+                </div>
+                <div class="w-[20.375rem] leading-tight flex justify-center text-[1.395rem]">
+                    <h5>You can contact us at: <br>info@humanastudio.com</h5>
+                </div>
+                <div class="w-[20.375rem] leading-tight flex justify-end items-start text-[1.395rem]">
+                    <div class="page8Button border-[#8a8474] inline-block text-[1.395rem] border rounded-3xl px-6 py-2">
+                        <p class="text-[#8a8474] text-[1.395rem]">Get In Touch ↗</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line h-[1px] w-full my-4">
+                <div class="innerLine h-full"></div>
+            </div>
+            <div class="line h-[1px] w-full ">
+                <div class="innerLine h-full"></div>
+            </div>
+            <div class="grid grid-cols-4 gap-4 py-3 pb-[6.25rem]">
+                <div class="leading-none text-[2.897rem]">
+                    <div class="text-[2.249rem] pt-[2.247rem] pb-[1.123rem] overflow-hidden"><h2>Office</h2></div>
+                    <div class="text-[1.395rem] overflow-hidden"><h2>Lisbon, Portugal</h2></div>
+                    <div class="text-[1.395rem] mt-[1.123rem] overflow-hidden">Monday → Thursday 9am to 6pm <br><span class="py-1 text-[1rem] text-[#8a8474]">(UTC)</span></h2></div>
+                </div>
+                <div class="leading-none text-[2.897rem]">
+                    <div class="text-[2.249rem] pt-[2.247rem] pb-[1.123rem] overflow-hidden"><h2>Connect with us</h2></div>
+                    <div class="text-[1.395rem] overflow-hidden"><h2>info@humanastudio.com</h2></div>
+                    <div class="text-[1.395rem] mt-[1.123rem] overflow-hidden text-[#8a8474]">Creative? Share your work</h2></div>
+                </div>
+                <div class="leading-none text-[2.897rem]">
+                    <div class="text-[2.249rem] pt-[2.247rem] pb-[1.123rem] overflow-hidden"><h2>Join our newsletter</h2></div>
+                    <div class=" inputDiv text-[1.395rem] overflow-hidden">
+                        <input type="text" class="p-1 w-full text-[1.395rem] bg-transparent" name="hello" placeholder="Name"></input>
+                    </div>
+                    <div class=" inputDiv2 flex gap-4 text-[1.395rem] overflow-hidden">
+                        <input type="text" class="input2 p-1 pb-0 pt-6 w-4/5 text-[1.395rem] bg-transparent" name="hello" placeholder="E-mail"></input>
+
+                        <div class="circleArrow text-[1.395rem] mt-[1.5rem] overflow-hidden font-light text-[#8a8474] py-2 px-3 flex justify-center items-center"><h1>↗</h1></div>
+                    </div>
+                    
+                </div>
+                <div class="leading-none text-[2.897rem] flex justify-end">
+                    <div class="">
+                        <div class="text-[2.249rem] pt-[2.247rem] pb-[1.123rem] overflow-hidden"><h2>Follow us</h2></div>
+                    <div class="text-[1.395rem] overflow-hidden"><h2>Instagram ↗  Linkedin  ↗</h2></div>
+                    <div class="text-[1.395rem] overflow-hidden"><h2>Behance ↗  Medium  ↗</h2></div>
+                    <div class="text-[1.395rem] overflow-hidden"><h2>Dribble ↗  Spotify  ↗</h2></div>
+                    </div>
+                </div>
+            </div>
+            <div class="line h-[1px] w-full">
+                <div class="innerLine h-full"></div>
+            </div>
+            <div class="flex gap-[22.813rem] leading-none py-1
+            ">
+                <p>© 2024 We Are Humana, Lda. All Rights Reserved.</p>
+                <p>This website is running on sustainable energy and is CO2 neutral. ↗</p>
+            </div>
+        </div>
     </main>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Locomotive Scroll -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
     <!-- GSAP -->
