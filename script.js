@@ -150,86 +150,230 @@ function page1() {
 page1();
 
 
-function page3Animation() {
-  gsap.to("#page3Wrapper", {
-    transform: "translateX(-102%)",
+function page2Animation() {
+
+  var line = document.querySelector('.page2Line .innerLine');
+  var page2PTags = document.querySelectorAll('.page2 p')
+  var page2Tl = gsap.timeline({
     scrollTrigger: {
-      start: "top 0%",
-      end: "top -100%",
-      trigger: ".page3",
+      trigger: ".page2",
+      start: "top 70%",
+      end: "top 50%",
       scroller: "main",
-      // markers:true,
-      pin: true,
-      scrub: 1
+      markers: true,
+      // scrub: true
     }
+  })
+
+  page2Tl.to(line, {
+    width: "100%",
+    duration: 2,
+    ease: "power2.inOut",
+
+  }, 'aa');
+
+  page2PTags.forEach((p) => {
+    page2Tl.from(p, {
+      y: Math.random() * 100 + 200, // Adjust y value to randomize more
+      duration: Math.random() * 1 + 1, // Random duration between 1 and 2 seconds
+      stagger: 1,
+      ease: "power2.inOut",
+    }, 'aa');
   });
 };
-page3Animation();
+page2Animation();
 
-function page4Animation() {
-  var tl = gsap.timeline({
+function page3Animation() {
+
+  var line = document.querySelector('#page3UpperLine');
+  var page3Boxes = document.querySelectorAll('.boxes')
+  var page3Tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".countdownDivs",
+      trigger: ".page3",
+      start: "top 70%",
+      end: "top 50%",
+      scroller: "main",
+      markers: true,
+      // scrub: true
+    }
+  })
+
+  page3Tl.from(line, {
+    x: -2000,
+    duration: 1.8,
+    ease: "power2.inOut",
+
+  }, 'aa');
+
+  page3Boxes.forEach((box) => {
+    var h2Tags = box.querySelectorAll('h2');
+
+    page3Tl.from(box, {
+      opacity: 0,
+      x: Math.random() * 100 + 1500, // Adjust y value to randomize more
+      duration: Math.random() * 1 + 1, // Random duration between 1 and 2 seconds
+      stagger: 0.5,
+      ease: "power2.inOut",
+    }, 'aa');
+
+    gsap.set(h2Tags, {
+      y: '-2.3rem'
+    })
+    box.addEventListener('mouseenter', function () {
+      gsap.to(h2Tags, {
+        y: 0,
+      })
+    });
+    box.addEventListener('mouseleave', function () {
+
+      gsap.to(h2Tags, {
+        y: '-2.3rem'
+      })
+    });
+  });
+
+  page3Tl.set('#page3Wrapper', {
+    x: "0%",
+  })
+    .to("#page3Wrapper", {
+      // transform: "translateX(-102%)",
+      x: '-102%',
+      scrollTrigger: {
+        start: "top 0%",
+        end: "top -100%",
+        trigger: ".page3",
+        scroller: "main",
+        // markers:true,
+        pin: true,
+        scrub: 1
+      }
+    })
+  gsap.to(".page3LowerLine .innerLine", {
+    width: "100%",
+    delay: 1,
+    scrollTrigger: {
+      trigger: ".page4",
       start: "top 70%",
       scroller: 'main',
       end: "top 0%",
       markers: true,
-      onEnter: () => {
-        gsap.fromTo(".countdown",
-          { y: 200, opacity: 0, stagger: 1 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 2,
-            ease: "power2.out",
-            onUpdate: function () {
+    }
+  })
 
-              const yearsCount = Math.floor(gsap.getProperty(".yearsCount", "innerText"));
-              const projCount = Math.floor(gsap.getProperty(".projectsCount", "innerText"));
-              const countryCount = Math.floor(gsap.getProperty(".countryCount", "innerText"));
-              const treeCount = Math.floor(gsap.getProperty(".treeCount", "innerText"));
-              document.querySelector(".yearsCount").innerText = yearsCount;
-              document.querySelector(".projectsCount").innerText = projCount;
-              document.querySelector(".countryCount").innerText = countryCount;
-              document.querySelector(".treeCount").innerText = treeCount;
-            }
-          });
-      }
+};
+page3Animation();
+
+function page4Animation() {
+  var page4Tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page4",
+      start: "top 70%",
+      scroller: 'main',
+      end: "top 0%",
+      markers: true,
+
     },
 
   })
 
+  page4Tl.to(".countdown", {
+    duration:2,
+    ease: "power2.out",
+    onUpdate: function () {
+      const yearsCount = Math.floor(gsap.getProperty(".yearsCount", "innerText"));
+      const projCount = Math.floor(gsap.getProperty(".projectsCount", "innerText"));
+      const countryCount = Math.floor(gsap.getProperty(".countryCount", "innerText"));
+      const treeCount = Math.floor(gsap.getProperty(".treeCount", "innerText"));
+      document.querySelector(".yearsCount").innerText = yearsCount;
+      document.querySelector(".projectsCount").innerText = projCount;
+      document.querySelector(".countryCount").innerText = countryCount;
+      document.querySelector(".treeCount").innerText = treeCount;
+    }
+  }, 'a');
+  page4Tl.from('.page4Button , .page4Text p', {
+    y: Math.random() * 100 + 300, // Adjust y value to randomize more
+    duration: Math.random() * 1 + 1, // Random duration between 1 and 2 seconds
+    stagger: 1,
+    ease: "power2.inOut",
+  }, 'a');
   // Counter animation
-  tl.to(".projectsCount", {
+  page4Tl.to(".projectsCount", {
     innerText: 161,
     snap: { innerText: 1 },
-    duration: 1, // Duration of the counting
+    duration: 1.5, // Duration of the counting
+    delay:1,
     ease: "none" // Linear counting
   }, 'a');
-  tl.to(".yearsCount", {
+  page4Tl.to(".yearsCount", {
     innerText: 5,
     snap: { innerText: 1 },
-    duration: 1, // Duration of the counting
+    duration: 1.75, // Duration of the counting
+    delay:1,
     ease: "none" // Linear counting
   }, 'a');
-  tl.to(".countryCount", {
+  page4Tl.to(".countryCount", {
     innerText: 23,
     snap: { innerText: 1 },
-    duration: 1, // Duration of the counting
+    duration: 2, // Duration of the counting
+    delay:1,
     ease: "none" // Linear counting
   }, 'a');
-  tl.to(".treeCount", {
+  page4Tl.to(".treeCount", {
     innerText: 28,
     snap: { innerText: 1 },
-    duration: 1, // Duration of the counting
+    duration: 2.25, // Duration of the counting
+    delay:1,
     ease: "none" // Linear counting
   }, 'a');
-
+  gsap.to(".page4BottomLine .innerLine", {
+    width: "100%",
+    delay: 1,
+    scrollTrigger: {
+      trigger: ".page4BottomLine",
+      start: "top 70%",
+      scroller: 'main',
+      end: "top 0%",
+      markers: true,
+    }
+  })
 }
 page4Animation();
 
+function page5Animation() {
+  var page5PTags = document.querySelectorAll('.page5 p')
+  var page5Tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".page4BottomLine",
+      start: "top 70%",
+      end: "top 50%",
+      scroller: "main",
+      markers: true,
+      // scrub: true
+    }
+  })
 
-function page7Animation (){
+
+
+  page5PTags.forEach((p) => {
+    page5Tl.from(p, {
+      y:200, // Adjust y value to randomize more
+      duration: .5, // Random duration between 1 and 2 seconds
+      stagger: 1,
+      ease: "power2.inOut",
+    }, 'aa');
+  });
+
+  page5Tl.from('.page5Button', {
+    y:200, // Adjust y value to randomize more
+    duration: Math.random() * 1 + 1, // Random duration between 1 and 2 seconds
+    stagger: 1,
+    ease: "power2.inOut",
+  }, 'aa');
+
+};
+page5Animation();
+
+function page7Animation() {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     spaceBetween: 15,
